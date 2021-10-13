@@ -1,5 +1,6 @@
-import React, {useContext, useEffect} from 'react'
+import React, { useContext, useEffect } from 'react'
 import crudContext from '../context/crudContext';
+import Producto from './Producto';
 function Productos() {
 
     const context = useContext(crudContext)
@@ -26,11 +27,14 @@ function Productos() {
                     </tr>
                 </thead>
                 <tbody>
-                {   //Operador ternario condicional para ver si no hay productos muestra un msj
+                    {   //Operador ternario condicional para ver si no hay productos muestra un msj
                         //de lo contrario realiza el .map de los productos
-                        productos.length === 0 ? (<tr><td>No existen productos</td></tr>)    : (
+                        productos.length === 0 ? (<tr><td>No existen productos</td></tr>) : (
                             productos.map(producto => (
-                                <tr><td>{producto.nombre}</td></tr>
+                                <Producto
+                                    key={producto.id}
+                                    producto={producto}
+                                />
                             ))
                         )}
                 </tbody>
