@@ -2,3 +2,4 @@ export const ADDPRODUCT = "ADDPRODUCT";
 export const GETPRODUCTS = "GETPRODUCTS";
 export const EDITPRODUCT = "EDITPRODUCT";
 export const SETPRODUCT = "SETPRODUCT";
+export const DELETEPRODUCT = "DELETEPRODUCT";

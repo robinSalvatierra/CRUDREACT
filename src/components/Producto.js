@@ -5,17 +5,25 @@ import crudContext from '../context/crudContext';
 
 function Producto({ producto }) {
     const { nombre, precio, id } = producto;
-    const history = useHistory(); 
+    const history = useHistory();
 
     const context = useContext(crudContext)
-    const { setProduct } = context;
+    const { setProduct, deleteProduct } = context;
 
 
     const redireccionarEdicion = producto => {
-        setProduct(producto) ;
+        setProduct(producto);
 
-     history.push(`/producto/editar/${producto.id}`)
+        history.push(`/producto/editar/${producto.id}`)
     }
+
+    const confirmarEliminarProducto = id => {
+
+        deleteProduct(id);
+        // console.log(id)
+
+    }
+
 
     return (
         <tr>
@@ -32,7 +40,7 @@ function Producto({ producto }) {
                 <button
                     type="button"
                     className="btn btn-danger"
-
+                    onClick={() => confirmarEliminarProducto(id)}
                 >Eliminar</button>
             </td>
         </tr>

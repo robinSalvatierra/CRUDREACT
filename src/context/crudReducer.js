@@ -2,7 +2,8 @@ import {
     ADDPRODUCT,
     GETPRODUCTS,
     SETPRODUCT,
-    EDITPRODUCT
+    EDITPRODUCT,
+    DELETEPRODUCT
 
 } from './types';
 
@@ -32,6 +33,11 @@ export default (state, action) => {
                 productos: state.productos.map(producto =>
                     producto.id === action.payload.id ? producto = action.payload : producto
                 )
+            }
+        case DELETEPRODUCT:
+            return {
+                ...state,
+                productos: state.productos.filter(producto => producto.id !== action.payload)
             }
         default:
             return state;
