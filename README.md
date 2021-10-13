@@ -72,3 +72,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 https://github.com/typicode/json-server
 npm install -g json-server
 json-server --watch db.json
+
+https://react-bootstrap.github.io/components/navbar/
+npm i react-router-dom
+npm i react-router-bootstrap
+npm install react-bootstrap@next bootstrap@5.1.1
