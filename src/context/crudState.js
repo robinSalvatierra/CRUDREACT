@@ -3,7 +3,7 @@ import crudContext from "./crudContext";
 import crudReducer from "./crudReducer";
 import axios from 'axios';
 
-import { ADDPRODUCT, GETPRODUCTS } from "./types";
+import { ADDPRODUCT, GETPRODUCTS, SETPRODUCT,EDITPRODUCT } from "./types";
 
 const CrudState = props => {
     const initialState = {
@@ -40,6 +40,24 @@ const CrudState = props => {
         })
     }
 
+    const setProduct = (product) => {
+        dispatch({
+            type: SETPRODUCT,
+            payload: product
+        })
+    }
+
+    const updateProduct = async (producto) => {
+
+        await axios.put(`${urlbase}productos/${producto.id}`, producto);
+
+        dispatch({
+            type: EDITPRODUCT,
+            payload: producto
+        })
+
+    }
+
 
     return (
         <crudContext.Provider
@@ -47,7 +65,10 @@ const CrudState = props => {
                 productos: state.productos,
                 editproduct: state.editproduct,
                 getProducts: getProducts,
-                addProduct: addProduct
+                addProduct: addProduct,
+                setProduct: setProduct,
+                updateProduct: updateProduct
+
 
             }}
         >

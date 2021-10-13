@@ -1,6 +1,8 @@
 import {
     ADDPRODUCT,
-    GETPRODUCTS
+    GETPRODUCTS,
+    SETPRODUCT,
+    EDITPRODUCT
 
 } from './types';
 
@@ -16,6 +18,20 @@ export default (state, action) => {
                 ...state,
                 productos: [...state.productos, action.payload]
 
+            }
+        case SETPRODUCT:
+            //console.log(action.payload)
+            return {
+                ...state,
+                editproduct: action.payload,
+
+            }
+        case EDITPRODUCT:
+            return {
+                ...state,
+                productos: state.productos.map(producto =>
+                    producto.id === action.payload.id ? producto = action.payload : producto
+                )
             }
         default:
             return state;

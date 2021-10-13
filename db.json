@@ -12,17 +12,17 @@
     },
     {
       "nombre": "nuevo",
-      "precio": "03333",
+      "precio": 15,
       "id": 3
     },
     {
       "nombre": "lentes",
-      "precio": "03332",
+      "precio": 54,
       "id": 4
     },
     {
-      "nombre": "lentes333",
-      "precio": "0222",
+      "nombre": "lentenuevos",
+      "precio": 222,
       "id": 5
     }
   ]
