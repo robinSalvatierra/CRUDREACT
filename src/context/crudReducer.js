@@ -11,6 +11,12 @@ export default (state, action) => {
                 ...state,
                 productos: action.payload
             }
+        case ADDPRODUCT:
+            return {
+                ...state,
+                productos: [...state.productos, action.payload]
+
+            }
         default:
             return state;
     }

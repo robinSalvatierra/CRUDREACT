@@ -29,13 +29,25 @@ const CrudState = props => {
         })
     }
 
+    const addProduct = async (product) => {
+
+        const url = urlbase + 'productos';
+        await axios.post(url, product);
+
+        dispatch({
+            type: ADDPRODUCT,
+            payload: product
+        })
+    }
+
 
     return (
         <crudContext.Provider
             value={{
                 productos: state.productos,
                 editproduct: state.editproduct,
-                getProducts: getProducts
+                getProducts: getProducts,
+                addProduct: addProduct
 
             }}
         >

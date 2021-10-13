@@ -1,14 +1,29 @@
 {
-    "productos": [
-      {
-        "nombre": "producto",
-        "precio": 32,
-        "id": 1
-      },
-      {
-        "nombre": "nuevo producto",
-        "precio": "33",
-        "id": 2
-      }
-    ]
-  }
+  "productos": [
+    {
+      "nombre": "producto",
+      "precio": 32,
+      "id": 1
+    },
+    {
+      "nombre": "nuevo producto",
+      "precio": "33",
+      "id": 2
+    },
+    {
+      "nombre": "nuevo",
+      "precio": "03333",
+      "id": 3
+    },
+    {
+      "nombre": "lentes",
+      "precio": "03332",
+      "id": 4
+    },
+    {
+      "nombre": "lentes333",
+      "precio": "0222",
+      "id": 5
+    }
+  ]
+}
