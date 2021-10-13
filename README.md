@@ -69,11 +69,20 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
+1
 https://github.com/typicode/json-server
 npm install -g json-server
 json-server --watch db.json
 
+2
 https://react-bootstrap.github.io/components/navbar/
 npm i react-router-dom
 npm i react-router-bootstrap
 npm install react-bootstrap@next bootstrap@5.1.1
+
+3
+npm i axios
+
+4
+
+5

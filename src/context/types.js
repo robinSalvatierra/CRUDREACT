@@ -1,1 +1,2 @@
 export const ADDPRODUCT = "ADDPRODUCT";
+export const GETPRODUCTS = "GETPRODUCTS";

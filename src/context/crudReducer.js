@@ -1,11 +1,16 @@
 import {
     ADDPRODUCT,
+    GETPRODUCTS
 
-}from './types';
+} from './types';
 
-export default (state, action) =>{
-    switch(action.type) {
-
+export default (state, action) => {
+    switch (action.type) {
+        case GETPRODUCTS:
+            return {
+                ...state,
+                productos: action.payload
+            }
         default:
             return state;
     }

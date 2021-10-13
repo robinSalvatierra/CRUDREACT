@@ -16,12 +16,12 @@ function App() {
     <Router>
       <CrudState>
         <Header />
-
-        <Switch>
-          <Route exact path="/" component={Productos} />
-          <Route exact path="/producto/nuevo" component={NuevoProducto} />
-        </Switch>
-
+        <div className="container mt-5">
+          <Switch>
+            <Route exact path="/" component={Productos} />
+            <Route exact path="/producto/nuevo" component={NuevoProducto} />
+          </Switch>
+        </div>
       </CrudState>
     </Router>
   );
